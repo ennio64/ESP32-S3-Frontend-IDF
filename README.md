@@ -19,15 +19,37 @@ Comunica via **ESP-NOW** con il modulo backend
 
 ## Build
 
-```powershell
-# Attiva ESP-IDF
-. C:\esp\v6.1\esp-idf\export.ps1
+Al primo utilizzo su un nuovo PC:
 
-# Clona (solo la prima volta)
+```powershell
+# 1. Clona il repository
 git clone https://github.com/ennio64/ESP32-S3-Frontend-IDF.git
 cd ESP32-S3-Frontend-IDF
 
-# Compila
+# 2. Attiva l'ambiente ESP-IDF (una volta per sessione)
+. C:\esp\v6.1\esp-idf\export.ps1
+
+# 3. Configura il target (solo la prima volta)
+idf.py set-target esp32s3
+
+# 4. Compila
+idf.py build
+```
+
+Per le build successive, dalla stessa cartella:
+
+```powershell
+. C:\esp\v6.1\esp-idf\export.ps1   # solo se hai aperto un nuovo terminale
+idf.py build
+```
+
+Flash e monitor seriale:
+
+```powershell
+idf.py -p COM<N> flash monitor
+```
+
+Sostituisci `<N>` con la tua porta COM (es. `COM4`). Per uscire dal monitor: `Ctrl+]`.
 
 ## Workflow Git
 
