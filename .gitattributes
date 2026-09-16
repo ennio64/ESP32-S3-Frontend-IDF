@@ -1,0 +1,15 @@
+# Normalizza i fine riga dei file di testo (evita i warning LF/CRLF)
+* text=auto eol=lf
+
+# File binari: Git non deve tentare conversioni di fine riga né diff testuali
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.bmp binary
+*.ico binary
+*.webp binary
+*.pdf binary
+*.bin binary
+*.elf binary
+*.hex binary

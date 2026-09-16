@@ -1,0 +1,127 @@
+# ============================================================
+#  ESP32-S3 Frontend IDF - .gitignore
+# ============================================================
+
+# ------------------------------------------------------------
+# Build artifacts (ESP-IDF / CMake)
+# ------------------------------------------------------------
+build/
+build*/
+cmake-build-*/
+*.o
+*.obj
+*.a
+*.elf
+*.map
+*.bin
+*.hex
+*.img
+*.exe
+
+# ------------------------------------------------------------
+# Componenti gestiti da idf.py (vengono riscaricati)
+# ------------------------------------------------------------
+managed_components/
+
+# ------------------------------------------------------------
+# Configurazione SDK generata (NON versionare sdkconfig)
+# Se vuoi rendere il progetto riproducibile, versiona
+# invece sdkconfig.defaults
+# ------------------------------------------------------------
+sdkconfig
+sdkconfig.old
+sdkconfig.ci
+sdkconfig.*.old
+
+# ------------------------------------------------------------
+# Lock delle dipendenze (rigenerato automaticamente)
+# ------------------------------------------------------------
+dependencies.lock
+
+# ------------------------------------------------------------
+# Backup e copie locali
+# ------------------------------------------------------------
+*.bak
+*.old
+*~
+* - Copia.*
+* - Copia
+*Copia*
+*.orig
+*.rej
+
+# ------------------------------------------------------------
+# VS Code
+# ------------------------------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/c_cpp_properties.json
+!.vscode/compile_commands.json
+
+# ------------------------------------------------------------
+# Altri IDE
+# ------------------------------------------------------------
+.idea/
+*.iml
+*.swp
+*.swo
+.vs/
+
+# ------------------------------------------------------------
+# Sistema operativo
+# ------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ------------------------------------------------------------
+# Log e file temporanei
+# ------------------------------------------------------------
+*.log
+*.tmp
+*.temp
+*.pid
+*.seed
+*.pid.lock
+*.cache
+
+# ------------------------------------------------------------
+# Python (usato da ESP-IDF tooling)
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+
+# ------------------------------------------------------------
+# C/C++ tooling
+# ------------------------------------------------------------
+*.gcda
+*.gcno
+*.gcov
+
+# ------------------------------------------------------------
+# Immagini filesystem SPIFFS/LittleFS (se in futuro userai
+# un'immagine .bin generata da data/, verrà ignorata)
+# ------------------------------------------------------------
+data/*.bin
+data/*.img
+data/*.spiffs
+data/*.littlefs
+
+# ------------------------------------------------------------
+# NOTA: components/lovyangfx NON va in .gitignore
+# È gestito come submodule (.gitmodules + gitlink)
+# ------------------------------------------------------------
