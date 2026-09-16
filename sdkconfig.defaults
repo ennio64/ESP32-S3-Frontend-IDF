@@ -1,0 +1,18 @@
+# ============================================================
+#  sdkconfig.defaults ? ESP32-S3 Frontend IDF
+# ============================================================
+
+# ---- Target ----
+CONFIG_IDF_TARGET="esp32s3"
+
+# ---- Flash (modifica in 16MB se la tua scheda ? N16R8) ----
+CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
+CONFIG_ESPTOOLPY_FLASHSIZE="8MB"
+
+# ---- Partition table personalizzata ----
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+CONFIG_PARTITION_TABLE_MD5=y
+
+# ---- SPIFFS ----
+CONFIG_SPIFFS_MAX_PARTITIONS=3

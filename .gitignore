@@ -125,3 +125,5 @@ data/*.littlefs
 # NOTA: components/lovyangfx NON va in .gitignore
 # È gestito come submodule (.gitmodules + gitlink)
 # ------------------------------------------------------------
+# Log di build
+build_log.txt
