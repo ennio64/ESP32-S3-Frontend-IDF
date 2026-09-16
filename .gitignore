@@ -127,3 +127,6 @@ data/*.littlefs
 # ------------------------------------------------------------
 # Log di build
 build_log.txt
+
+# VS Code: configurazione locale (percorsi e porta COM specifici)
+.vscode/settings.json
