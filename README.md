@@ -28,6 +28,51 @@ git clone https://github.com/ennio64/ESP32-S3-Frontend-IDF.git
 cd ESP32-S3-Frontend-IDF
 
 # Compila
+
+## Workflow Git
+
+### Modifiche quotidiane
+
+Dopo aver modificato il codice sul PC di sviluppo:
+
+```powershell
+cd C:\ESP_IDF_Project\ESP32-S3-Frontend-IDF
+git add .
+git commit -m "Descrizione della modifica"
+git push
+```
+
+### Lavorare da più PC
+
+Se lavori su più computer, **prima di iniziare** sincronizza il repository locale con GitHub:
+
+```powershell
+git pull
+```
+
+E **prima di spegnere**, assicurati di aver pushato tutte le modifiche:
+
+```powershell
+git status     # deve dire "working tree clean"
+git push
+```
+
+### Clonare su un nuovo PC
+
+```powershell
+git clone https://github.com/ennio64/ESP32-S3-Frontend-IDF.git
+cd ESP32-S3-Frontend-IDF
+. C:\esp\v6.1\esp-idf\export.ps1
+idf.py set-target esp32s3
+idf.py build
+```
+
+### Note
+
+- **`sdkconfig`** (senza `.defaults`) è **escluso** dal versionamento: contiene solo valori generati.
+  Le impostazioni essenziali sono in **`sdkconfig.defaults`**.
+- **`build/`** e **`managed_components/`** sono escluse: si rigenerano al primo `idf.py build`.
+- I file **`.bak`** e **`" - Copia"`** sono ignorati: Git fa già da storico, non servono copie manuali.
 idf.py set-target esp32s3
 idf.py build
 
