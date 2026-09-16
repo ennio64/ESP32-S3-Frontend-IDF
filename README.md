@@ -98,5 +98,5 @@ idf.py build
 idf.py set-target esp32s3
 idf.py build
 
-# Flash + monitor seriale
+## Flash + monitor seriale
 idf.py -p COM<N> flash monitor
